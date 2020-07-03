@@ -235,7 +235,7 @@ module.exports = (function () {
                 commandLineOptions.push(options.jvmOptions);
             }
             commandLineOptions.push('-jar');
-            commandLineOptions.push(glob.sync('**/mockserver-netty-*-jar-with-dependencies.jar'));
+            commandLineOptions.push(glob.sync('**/mockserver-netty-*-jar-with-dependencies.jar')[0]);
             if (options.serverPort) {
                 commandLineOptions.push("-serverPort");
                 commandLineOptions.push(options.serverPort);
